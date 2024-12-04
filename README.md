@@ -17,6 +17,11 @@ The dataset includes hourly sea-level measurements from 12 tide gauge stations a
 - National Data Buoy Center (NDBC)
 - Copernicus Climate Change Service (C3S)
 
+![alt text](https://github.com/arJ-V/NSF-HDR-Flood-Map-Prediction-Challenge/blob/main/Gaugemap.jpeg?raw=true)
+
+Map of possible tide gauge stations on US East Coast
+
+
 ## **Data Preprocessing**
 Data preprocessing involved several critical steps:
 1. **Handling Missing Values:** Replaced filler values with NaN and removed incomplete records.
