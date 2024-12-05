@@ -43,7 +43,7 @@ One important step to help us develop our intuituion and understanding of the da
 
 #### Data plotted with anomalies marked 
 
-<img src="https://github.com/arJ-V/NSF-HDR-Flood-Map-Prediction-Challenge/blob/main/anomaldatay.jpeg" alt="Alt text" width="700"/>
+<img src="https://github.com/arJ-V/NSF-HDR-Flood-Map-Prediction-Challenge/blob/main/anomalydata.jpeg" alt="Alt text" width="700"/>
 
 #### Anomalies isolated and marked in red 
 
