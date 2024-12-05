@@ -39,36 +39,32 @@ One important step to help us develop our intuituion and understanding of the da
 
 #### Mapping of Training data set using Meta's Prophet -- a time series forecasting algorithm (https://facebook.github.io/prophet/)
 
-<img src="https://github.com/arJ-V/NSF-HDR-Flood-Map-Prediction-Challenge/blob/main/combineddata.jpg" alt="Alt text" width="700"/>
+<img src="https://github.com/arJ-V/NSF-HDR-Flood-Map-Prediction-Challenge/blob/main/combineddata.jpeg" alt="Alt text" width="700"/>
 
 #### Data plotted with anomalies marked 
 
-<img src="https://github.com/arJ-V/NSF-HDR-Flood-Map-Prediction-Challenge/blob/main/anomaly.jpg" alt="Alt text" width="700"/>
+<img src="https://github.com/arJ-V/NSF-HDR-Flood-Map-Prediction-Challenge/blob/main/anomaly.jpeg" alt="Alt text" width="700"/>
 
 #### Anomalies isolated and marked in red 
 
 ## **Model Development**
 The model development phase focused on selecting appropriate machine learning algorithms capable of handling time series data with spatial components. Key steps included:
+
 - **Algorithm Selection:** Evaluated models such as Random Forests, LSTM networks, and hybrid models combining neural networks with fuzzy logic. Our research included a 'sweep' of relevant literature of flood analysis and model development.
   
 - **Training and Validation:** Used cross-validation techniques to ensure model robustness across different stations. In addition, our project was offered with a training data set and a testing data set such that the training contained 20 years worth of data previous from 2013 and the testing container 2013-2024. 
 
 
 ## **Model Creation/Results**
-The final model was trained on the preprocessed dataset and evaluated using metrics such as precision, recall, and F1-score. Results indicated:
-- High accuracy in detecting anomalies during extreme weather events.
-- Improved prediction reliability by incorporating geostrophic velocity data.
+The final model was developed with a random forest model and evaluated using metrics such as precision, recall, and F1-score. Results indicated:
 
 <img src="https://github.com/arJ-V/NSF-HDR-Flood-Map-Prediction-Challenge/blob/main/Results.jpg" alt="Alt text" width="500"/>
-
-### **Visualization**
-Graphs and plots were generated to visualize the model's predictions against actual sea-level measurements, highlighting areas of success and potential improvement.
 
 
 ## **Conclusion/Future Work**
 This project successfully demonstrated the application of machine learning in predicting sea-level anomalies. Future work will focus on:
-- Enhancing model accuracy by integrating additional meteorological data.
-- Expanding the temporal scope to include more recent data for better generalization.
+- Enhancing model accuracy by a more indepth analysis of data relationships
+- Developing forecasting for 10 years beyond 2013
 - Exploring real-time anomaly detection capabilities for proactive coastal management.
 
 ## **Acknowledgments**
