@@ -17,7 +17,7 @@ The dataset includes hourly sea-level measurements from 12 tide gauge stations a
 - National Data Buoy Center (NDBC)
 - Copernicus Climate Change Service (C3S)
 
-<img src="https://github.com/arJ-V/NSF-HDR-Flood-Map-Prediction-Challenge/blob/main/Gaugemap.jpg" alt="Alt text" width="300"/>
+<img src="https://github.com/arJ-V/NSF-HDR-Flood-Map-Prediction-Challenge/blob/main/Gaugemap.jpg" alt="Alt text" width="500"/>
 
 
 Map of possible tide gauge stations on US East Coast
@@ -26,22 +26,44 @@ Map of possible tide gauge stations on US East Coast
 ## **Data Preprocessing**
 Data preprocessing involved several critical steps:
 1. **Handling Missing Values:** Replaced filler values with NaN and removed incomplete records.
-2. **Scaling:** Applied scaling factors to convert raw measurements into meaningful units.
-3. **Time Conversion:** Converted time data into a standard datetime format for analysis.
-4. **Feature Engineering:** Extracted relevant features such as geostrophic velocity anomalies and corrected for instrumental drift.
+    -- A note on this issue is that many missing values were filled with an arbitrary large negative number (~-270000...) such our preprocessing had to account for this also
+   
+2. **Time Conversion:** Converted time data into a standard datetime format for analysis. Cross referencing recorded anomaly data which included time & coordinates to the record sheet which held location (one of 12 gauges) and the SLA value at a certain time.
+   
+3. **Feature Engineering:** Extracted relevant features mainly looking at Sea Level Anomaly. Other values recorded on the record sheet were used for research and developing an understanding of the data set but were ultimately not necessary for our model.
+
+### Model Visualization
+One important step to help us develop our intuituion and understanding of the data and the ideal outcome was looking at the data in a time series format.
+
+<img src="https://github.com/arJ-V/NSF-HDR-Flood-Map-Prediction-Challenge/blob/main/prophetmapping.png" alt="Alt text" width="700"/>
+
+#### Mapping of Training data set using Meta's Prophet -- a time series forecasting algorithm (https://facebook.github.io/prophet/)
+
+<img src="https://github.com/arJ-V/NSF-HDR-Flood-Map-Prediction-Challenge/blob/main/combineddata.jpg" alt="Alt text" width="700"/>
+
+#### Data plotted with anomalies marked 
+
+<img src="https://github.com/arJ-V/NSF-HDR-Flood-Map-Prediction-Challenge/blob/main/anomaly.jpg" alt="Alt text" width="700"/>
+
+#### Anomalies isolated and marked in red 
 
 ## **Model Development**
 The model development phase focused on selecting appropriate machine learning algorithms capable of handling time series data with spatial components. Key steps included:
-- **Algorithm Selection:** Evaluated models such as Random Forests, LSTM networks, and hybrid models combining neural networks with fuzzy logic.
-- **Training and Validation:** Used cross-validation techniques to ensure model robustness across different stations.
+- **Algorithm Selection:** Evaluated models such as Random Forests, LSTM networks, and hybrid models combining neural networks with fuzzy logic. Our research included a 'sweep' of relevant literature of flood analysis and model development.
+  
+- **Training and Validation:** Used cross-validation techniques to ensure model robustness across different stations. In addition, our project was offered with a training data set and a testing data set such that the training contained 20 years worth of data previous from 2013 and the testing container 2013-2024. 
+
 
 ## **Model Creation/Results**
 The final model was trained on the preprocessed dataset and evaluated using metrics such as precision, recall, and F1-score. Results indicated:
 - High accuracy in detecting anomalies during extreme weather events.
 - Improved prediction reliability by incorporating geostrophic velocity data.
 
+<img src="https://github.com/arJ-V/NSF-HDR-Flood-Map-Prediction-Challenge/blob/main/Results.jpg" alt="Alt text" width="500"/>
+
 ### **Visualization**
 Graphs and plots were generated to visualize the model's predictions against actual sea-level measurements, highlighting areas of success and potential improvement.
+
 
 ## **Conclusion/Future Work**
 This project successfully demonstrated the application of machine learning in predicting sea-level anomalies. Future work will focus on:
